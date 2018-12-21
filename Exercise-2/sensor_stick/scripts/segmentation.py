@@ -72,10 +72,10 @@ def pcl_callback(pcl_msg):
     ros_cloud_table = pcl_to_ros(extracted_inliers)
 
     # Publish ROS messages
-    pcl_table_pub.publish(pcl_msg)
-    #pcl_table_pub.publish(ros_cloud_table)
-    pcl_objects_pub.publish(pcl_msg)
-    #pcl_objects_pub.publish(ros_cloud_objects)
+    #pcl_table_pub.publish(pcl_msg)
+    pcl_table_pub.publish(ros_cloud_table)
+    #pcl_objects_pub.publish(pcl_msg)
+    pcl_objects_pub.publish(ros_cloud_objects)
 
 if __name__ == '__main__':
 
