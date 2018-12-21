@@ -33,8 +33,8 @@ def pcl_callback(pcl_msg):
     # Assign axis and range to the passthrough filter object.
     filter_axis = 'z'
     passthrough.set_filter_field_name(filter_axis)
-    axis_min = 0.6
-    axis_max = 1.1
+    axis_min = 0.76 # 0.6
+    axis_max = 1.1 # 1.1
     passthrough.set_filter_limits(axis_min, axis_max)
 
     # Finally use the filter function to obtain the resultant point cloud. 
@@ -51,7 +51,7 @@ def pcl_callback(pcl_msg):
     # Max distance for a point to be considered fitting the model
     # Experiment with different values for max_distance 
     # for segmenting the table
-    max_distance = 0.01
+    max_distance = 0.01 # 0.01
     seg.set_distance_threshold(max_distance)
 
     # Call the segment function to obtain set of inlier indices and model coefficients
